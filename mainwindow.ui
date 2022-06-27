@@ -156,6 +156,9 @@
     <addaction name="separator"/>
     <addaction name="actionCheck_File"/>
     <addaction name="actionLcik_file"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_Ass"/>
    </widget>
    <widget class="QMenu" name="menuViev">
     <property name="title">
@@ -215,6 +218,16 @@
   <action name="actionLcik_file">
    <property name="text">
     <string>Lick file</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save..</string>
+   </property>
+  </action>
+  <action name="actionSave_Ass">
+   <property name="text">
+    <string>Save Ass</string>
    </property>
   </action>
  </widget>
