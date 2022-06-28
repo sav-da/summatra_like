@@ -30,9 +30,5 @@ RUN make install -j2
 
 WORKDIR /usr/src/
 RUN git clone https://github.com/Luciferovich/summatra_like.git
-RUN mkdir ./summatra_like/build
-WORKDIR /usr/src/summatra_like/build
-RUN qmake ../summatra.pro
-RUN make 
-RUN make clean 
-RUN cp -r ../build /app
+VOLUME [ "/usr/src/summatra_like/" ]
+CMD [ "/usr/src/summatra_like/dock_build.sh" ]
