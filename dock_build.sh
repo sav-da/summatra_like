@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mkdir build && cd build
+mkdir build 
+cd build
 qmake ../summatra.pro
 make 
 make clean 

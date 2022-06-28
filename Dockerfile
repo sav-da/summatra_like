@@ -27,7 +27,11 @@ RUN make HAVE_GLUT=no prefix=/usr/local -j2
 RUN make install -j2 
 
 
-WORKDIR /
+
+
+
+RUN ls 
+RUN cd ..
 WORKDIR /usr/src/
 RUN git clone https://github.com/Luciferovich/summatra_like.git
 WORKDIR /usr/src/summatra_like/
