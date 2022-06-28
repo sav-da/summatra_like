@@ -25,10 +25,11 @@ RUN apt-get -y install libboost-dev libopenjp2-7-dev
 RUN cmake ..
 RUN make HAVE_GLUT=no prefix=/usr/local -j2 
 RUN make install -j2 
-
-
-RUN cd .
+RUN cd ./.
+SHELL [ "bash", "-c", ". /opt/rh/devtoolset-10/enable; exec bash -c \"$@\"", "-s"]
 WORKDIR /usr/src/
 RUN git clone https://github.com/Luciferovich/summatra_like.git
+WORKDIR /usr/src/summatra_like/
 VOLUME [ "/usr/src/summatra_like/" ]
-CMD [ "bash /usr/src/summatra_like/dock_build.sh" ]
+RUN ["chmod", "+x", "/usr/src/summatra_like/dock_build.sh"]
+CMD [ "/usr/src/summatra_like/dock_build.sh" ]
