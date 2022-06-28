@@ -27,8 +27,8 @@ RUN make HAVE_GLUT=no prefix=/usr/local -j2
 RUN make install -j2 
 
 
-
+RUN cd .
 WORKDIR /usr/src/
 RUN git clone https://github.com/Luciferovich/summatra_like.git
 VOLUME [ "/usr/src/summatra_like/" ]
-CMD [ "/usr/src/summatra_like/dock_build.sh" ]
+CMD [ "bash /usr/src/summatra_like/dock_build.sh" ]
