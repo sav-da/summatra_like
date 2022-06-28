@@ -5,4 +5,4 @@ cd build
 qmake ../summatra.pro
 make 
 make clean 
-cp * /mnt/dir
+cp -r * /mnt/dir
